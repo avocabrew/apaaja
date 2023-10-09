@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <!--Feather Icons-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="/css/newHome.css" />
+    <link rel="stylesheet" type="text/css" href="/css/test.css" />
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+ 
+</head>
+<!-- Header -->
+<div class="nav">
+
+    <div class="logo">
+    <img src="/images/logo carefit.png" alt="logo" />
+    </div>
+
+    <div class="box">
+      <div class="cart-count">0</div>
+      <ion-icon name="cart"  id="cart-icon" ></ion-icon>
+    </div>
+
+    <div class="cart">
+      <div class="cart-title">Cart Items</div>
+      <div class="cart-content">
+      </div>
+      <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">Rp0</div>
+      </div>
+      <button class="btn-buy">Place Order</button>
+      <ion-icon name="close" id="cart-close"></ion-icon>
+      </div>
+    </div>
+
+<!-- Slide show -->
+<section class="slideshow-container">
+    <div class="slider">
+        <div class="mySlides fade">
+            <img src="/images/banner/banner1.png" class="banner" style="width:100%">
+          </div>
+          <div class="mySlides fade">
+            <img src="/images/banner/banner2.png" style="width:100%">
+          </div>
+          <div class="mySlides fade">
+            <img src="/images/banner/banner3.png" style="width:100%">
+          </div>
+    </div>
+          <div class="dots" style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+</section> 
+
+<!-- JS -->
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script> 
+
+<!-- Kategori -->
+<section class="row2">
+    <section class="categorymenu">
+    <div class="categorytitle">Kategori</div>
+        <section class="categoryrow">
+        <div class="category">
+            <a href="olahraga.html"><button type="button" class="categorybutton"><img src="../images/category/olahraga.png" class="categoryimg"></button></a>
+            <div class="categoryname">Olahraga</div>
+        </div>
+        <div class="category">
+            <a href="obat.html"><button type="button" class="categorybutton"><img src="../images/category/obat.png" class="categoryimg"></button></a>
+            <div class="categoryname">Obat</div>
+        </div>
+        <div class="category">
+            <a href="buahdansayur.html"><button type="button" class="categorybutton"><img src="../images/category/buahdansayur.png" class="categoryimg"></button></a>
+            <div class="categoryname">Buah dan Sayur</div>
+        </div>
+        <div class="category">
+            <a href="makanansehat.html"><button type="button" class="categorybutton"><img src="../images/category/makanansehat.png" class="categoryimg"></button></a>
+            <div class="categoryname">Makanan Sehat</div>
+        </div>
+        <div class="category">
+            <a href="elektronik.html"><button type="button" class="categorybutton"><img src="../images/category/alatkesehatan.png" class="categoryimg"></button></a>
+            <div class="categoryname">Alat Kesehatan</div>
+        </div>
+        </section>
+    </section>
+    <section class="berita">
+        <section class="newsmenu">
+        <div class="newstitle">Info Kesehatan</div>
+        <a href="news.html"><button class="seeall">Lihat Semua</button></a>
+    </section>
+        <section class="newsrow">
+        <div class="newscard">
+            <img class="newsimg" src="../images/herbs.png">
+            <a href="https://www.halodoc.com/artikel/11-manfaat-daun-sirih-untuk-kesehatan-yang-masih-jarang-diketahui"><h5 class="judulberita">11 Manfaat Daun Sirih untuk Kesehatan yang Masih Jarang Diketahui</h5></a>
+            <div class="news">Daun sirih mengandung berbagai nutrisi yang mendukung kesehatan tubuh, mulai dari yodium...</div>
+        </div>
+        <div class="newscard">
+                <img class="newsimg" src="../images/heartattack.png">
+                <a href="https://www.halodoc.com/artikel/selain-penyakit-jantung-ini-penyebab-nyeri-dada-yang-perlu-diwaspadai"><h5 class="judulberita">Selain Penyakit Jantung, Ini Penyebab Nyeri Dada yang Perlu Diwaspadai</h5></a>
+                <div class="news">Penyebab nyeri dada yang paling umum adalah penyakit jantung koroner. Padahal...</div>
+            </div>
+            <div class="newscard">
+                <img class="newsimg" src="../images/rabun.png">
+                <a href="https://www.halodoc.com/artikel/ini-gejala-rabun-jauh-atau-miopi-yang-perlu-diketahui"><h5 class="judulberita">Ini Gejala Rabun Jauh atau Miopi yang Perlu Diketahui</h5></a>
+                <div class="news">Rabun jauh atau miopi merupakan masalah penglihatan yang umum terjadi. Gejala rabun jauh...</div>
+            </div>
+        </section>
+    </section>
+    </section>
+xx
+<!--all product-->
+    <section>
+    <h1 class="allproduct">Semua Produk</h1>
+    </section class="products"> 
+    <section class="productrow">       
+        <div class="card">
+            <img class="produk" src="../images/produk/smartwatch.png">
+        <div class="content">
+            <h3 class="namaproduk">Smart Watch</h3>
+            <h5 class="hargaproduk">Rp 880.000</h5>
+            <div class="bottom">
+                <img class="star" src="../images/star.png">
+                <p class="rating">5.0</p>
+                <p class="terjual">50 terjual</p>
+            </div>
+        </div>
+        <div><button class="addcart">Add to Cart</button></div>
+        </div>
+        <div class="card">
+            <img class="produk" src="../images/produk/bottle.png">
+        <div class="content">
+            <h3 class="namaproduk">Botol Air Minum</h3>
+            <h5 class="hargaproduk">Rp 125.000</h5>
+            <div class="bottom">
+                <img class="star" src="../images/star.png">
+                <p class="rating">4.9</p>
+                <p class="terjual">35 terjual</p>
+            </div>
+        <div><button class="addcart">Add to Cart</button></div>
+        </div>
+        </div>
+        <div class="card">
+            
+            <img class="produk" src="../images/produk/salad.png">
+        <div class="content">
+            <h3 class="namaproduk">Salad</h3>
+            <h5 class="hargaproduk">Rp 60.000</h5>
+            <div class="bottom">
+                <img class="star" src="../images/star.png">
+                <p class="rating">4.5</p>
+                <p class="terjual">80 terjual</p>
+            </div>
+        <div><button class="addcart">Add to Cart</button></div>
+        </div>
+        </div>
+        <div class="card">
+            <img class="produk" src="../images/produk/avocado.png">
+        <div class="content">
+            <h3 class="namaproduk">Avocado</h3>
+            <h5 class="hargaproduk">Rp 30.000</h5>
+            <div class="bottom">
+                <img class="star" src="../images/star.png">
+                <p class="rating">4.8</p>
+                <p class="terjual">20 terjual</p>
+            </div>
+        <div><button class="addcart">Add to Cart</button></div>
+        </div>
+        </div>
+        <div class="card">
+            <img class="produk" src="../images/produk/skippingrope.png">
+        <div class="content">
+            <h3 class="namaproduk">Skipping Rope</h3>
+            <h5 class="hargaproduk">Rp 70.000</h5>
+            <div class="bottom">
+                <img class="star" src="../images/star.png">
+                <p class="rating">3.0</p>
+                <p class="terjual">35 terjual</p>
+            </div>
+        <div><button class="addcart">Add to Cart</button></div>
+        </div>
+        </div>
+        <div class="card">
+            <img class="produk" src="../images/produk/lettuce.png">
+        <div class="content">
+            <h3 class="namaproduk">Selada Segar</h3>
+            <h5 class="hargaproduk">Rp 30.000</h5>
+            <div class="bottom">
+                <img class="star" src="../images/star.png">
+                <p class="rating">4.7</p>
+                <p class="terjual">60 terjual</p>
+            </div>
+        <div><button class="addcart">Add to Cart</button></div>
+        </div>
+        </div>
+    </section> 
+    <section class="productrow">       
+        <div class="card">
+            <img class="produk" src="../images/produk/vitamin.png">
+        <div class="content">
+            <h3 class="namaproduk">Blackmores</h3>
+            <h5 class="hargaproduk">Rp 190.000</h5>
+            <div class="bottom">
+                <img class="star" src="../images/star.png">
+                <p class="rating">5.0</p>
+                <p class="terjual">70 terjual</p>
+            </div>
+        <div><button class="addcart">Add to Cart</button></div>
+        </div>
+        </div>
+        <div class="card">
+            <img class="produk" src="../images/produk/scales.png">
+        <div class="content">
+            <h3 class="namaproduk">Alat Timbang Digital</h3>
+            <h5 class="hargaproduk">Rp 100.000</h5>
+            <div class="bottom">
+                <img class="star" src="../images/star.png">
+                <p class="rating">4.9</p>
+                <p class="terjual">50 terjual</p>
+            </div>
+        <div><button class="addcart">Add to Cart</button></div>
+        </div>
+        </div>
+        <div class="card">
+            <img class="produk" src="../images/produk/bloodpressure.png">
+        <div class="content">
+            <h3 class="namaproduk">Alat Tensi Digital</h3>
+            <h5 class="hargaproduk">Rp 400.000</h5>
+            <div class="bottom">
+                <img class="star" src="../images/star.png">
+                <p class="rating">4.9</p>
+                <p class="terjual">40 terjual</p>
+            </div>
+        <div><button class="addcart">Add to Cart</button></div>
+        </div>
+        </div>
+        <div class="card">
+            <img class="produk" src="../images/produk/promag.png">
+        <div class="content">
+            <h3 class="namaproduk">Promag Tablet</h3>
+            <h5 class="hargaproduk">Rp 15.000</h5>
+            <div class="bottom">
+                <img class="star" src="../images/star.png">
+                <p class="rating">4.9</p>
+                <p class="terjual">10 terjual</p>
+            </div>
+        <div><button class="addcart">Add to Cart</button></div>                
+        </div>
+        </div>
+        <div class="card">
+            <img class="produk" src="../images/produk/bread.png">
+        <div class="content">
+            <h3 class="namaproduk">Roti Gandum</h3>
+            <h5 class="hargaproduk">Rp 45.000</h5>
+            <div class="bottom">
+                <img class="star" src="../images/star.png">
+                <p class="rating">4.0</p>
+                <p class="terjual">55 terjual</p>
+            </div>
+        <div><button class="addcart">Add to Cart</button></div>
+        </div>
+        </div>
+        <div class="card">
+            <img class="produk" src="../images/produk/milkprotein.png">
+        <div class="content">
+            <h3 class="namaproduk">Susu Protein</h3>
+            <h5 class="hargaproduk">Rp 236.000</h5>
+            <div class="bottom">
+                <img class="star" src="../images/star.png">
+                <p class="rating">4.8</p>
+                <p class="terjual">5 terjual</p>
+            </div>
+        <div><button class="addcart">Add to Cart</button></div>                
+        </div>
+        </div>
+    </section> 
+        <div>
+            <div>
+                <a href="products.html"><button type="button" class="morebutton">Lihat Selengkapnya</button></a>
+            </div>
+        </div>
+</div>
+</body>
+
+<script src="/js/test.js"></script>
+<body>
+    
+</body>
+</html>
